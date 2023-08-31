@@ -1,12 +1,38 @@
-body {
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    50% {
+      opacity: 0.5;
+      transform: translateY(5px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes colorChange {
+    0% {
+      background-color: #DE2200;
+    }
+    50% {
+      background-color:#940A4C;
+    }
+    100% {
+      background-color: #9C0401;
+    }
+  }
+  body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: palevioletred;
     margin: 0;
     padding: 0;
-}
+    animation: colorChange 5s infinite;
+  }
 header {
-    background-color:#940A4C;
+    background-color:#AF0238;
     color: white;
     padding: 10px 0;
 }
@@ -31,9 +57,13 @@ header {
     color:whitesmoke;
     margin-bottom: 30px;
 }
+.profile-pic, .message, .message2 {
+    animation: fadeIn 1.5s ease-out 0.5s forwards;
+  }
+  
 .footer {
-    background-color:#940A4C;
-    color: white;
+    background-color:#AF0238;
+    color: whitesmoke;
     padding: 10px 0;
     position: fixed;
     bottom: 0;
