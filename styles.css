@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: palevioletred;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color:#940A4C;
+    color: white;
+    padding: 10px 0;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.profile-pic {
+    border-radius: 50%;
+    max-width: 150px;
+    margin: 20px auto;
+    display: block;
+}
+.message {
+    font-size: 18px;
+    color:whitesmoke;
+    margin-bottom: 20px;
+}
+.message2{
+    font-size: 18px;
+    color:black;
+    margin-bottom: 30px;
+}
+.footer {
+    background-color:#940A4C;
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
