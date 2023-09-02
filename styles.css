@@ -1,71 +1,115 @@
+/* Keyframe animations */
+@keyframes profilePicEffect {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 @keyframes fadeIn {
-    0% {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
-    50% {
-      opacity: 0.5;
-      transform: translateY(5px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
   }
+  50% {
+    opacity: 0.5;
+    transform: translateY(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes neonGlow {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 105, 180, 0.5), 0 0 20px rgba(255, 105, 180, 0.5), 0 0 30px rgba(255, 105, 180, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(255, 105, 180, 0.7), 0 0 40px rgba(255, 105, 180, 0.7), 0 0 60px rgba(255, 105, 180, 0.7);
+  }
+  100% {
+    text-shadow: 0 0 10px rgba(255, 105, 180, 0.5), 0 0 20px rgba(255, 105, 180, 0.5), 0 0 30px rgba(255, 105, 180, 0.5);
+  }
+}
 
-  @keyframes colorChange {
-    0% {
-      background-color: #DE2200;
-    }
-    50% {
-      background-color:#940A4C;
-    }
-    100% {
-      background-color: #9C0401;
-    }
+@keyframes colorChange {
+  0% {
+    background-color: #1E1E1E; 
   }
-  body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    animation: colorChange 5s infinite;
+  50% {
+    background-color: #3A3A3A;
   }
+  100% {
+    background-color: #000;
+  }
+}
+@keyframes textColorChange {
+  0% {
+    color: #FF69B4;
+  }
+  50% {
+    color: #FFC0CB;
+  }
+  100% {
+    color: #FFF;
+  }
+}
+/* Global Styles */
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background-color: #111; 
+  color: #FFF;
+}
+
+/* Header */
 header {
-    background-color:#AF0238;
-    color: white;
-    padding: 10px 0;
+  background-color: #222;
+  color: #FF69B4; 
+  padding: 20px 0;
 }
+
+h1 {
+  margin: 0;
+}
+
+/* Container */
 .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-}
-.profile-pic {
-    border-radius: 50%;
-    max-width: 150px;
-    margin: 20px auto;
-    display: block;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 30px;
+  text-align: center;
 }
 .message {
-    font-size: 18px;
-    color:whitesmoke;
-    margin-bottom: 20px;
+  font-size: 18px;
+  margin-bottom: 20px;
+  animation: fadeIn 1.5s ease-out 0.5s forwards, textColorChange 5s infinite, neonGlow 1s infinite;
 }
-.message2{
-    font-size: 18px;
-    color:whitesmoke;
-    margin-bottom: 30px;
+.profile-pic {
+  border-radius: 50%;
+  max-width: 150px;
+  margin: 20px auto;
+  display: block;
+  animation: fadeIn 1.5s ease-out 0.5s forwards, profilePicEffect 3s infinite alternate;
 }
-.profile-pic, .message, .message2 {
-    animation: fadeIn 1.5s ease-out 0.5s forwards;
-  }
-  
+
+/* Footer */
 .footer {
-    background-color:#AF0238;
-    color: whitesmoke;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+  background-color: #222;
+  color: #FF69B4;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Animate class */
+.animate {
+  animation: fadeIn 1.5s ease-out 0.5s forwards, textColorChange 5s infinite, neonGlow 1s infinite;
 }
